@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport-fit=cover lets the page draw under the rounded corners/
+         notch on newer iPhones; safe-area-inset padding (in styles.css)
+         then keeps buttons clear of that area instead of hiding under it -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Gallo Electrical Company Limited - Registered electrical engineering and contracting services across Nigeria since 1991.">
+
+    <!-- Colour of the browser toolbar on Android Chrome / the status bar area on some devices -->
+    <meta name="theme-color" content="#0f2a5f">
+
+    <!-- iPhone/iPad home-screen bookmark icon (Settings > Share > Add to Home Screen) -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Gallo Electrical">
+
+    <!-- How this page looks when shared as a link in WhatsApp, Facebook, etc. -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gallo Electrical Company Ltd | Electrical Engineering & Contracting">
+    <meta property="og:description" content="Registered electrical engineering and contracting services across Nigeria since 1991.">
+    <meta property="og:image" content="images/apple-touch-icon.png">
+
+    <title>Gallo Electrical Company Ltd | Electrical Engineering & Contracting</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Loads the homepage photo a little earlier so it appears faster -->
+    <link rel="preload" as="image" href="images/hero-background.jpg">
+
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Browser tab icon -->
+    <link rel="icon" type="image/png" href="images/gallo-logo-icon.png">
+</head>
+<body>
+
+    <!-- ============================================
+         SKIP LINK - lets keyboard/screen reader users
+         jump straight to the main content
+         ============================================ -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ============================================
+         HEADER / NAVIGATION
+         ============================================ -->
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="#home" class="logo-link" aria-label="Gallo Electrical Company Ltd - Home">
+                <img src="images/gallo-logo-icon.png" alt="Gallo Electrical Company Ltd logo" class="logo-image" width="52" height="52">
+                <span class="logo-text">
+                    <span class="logo-text-main">GALLO ELECTRICAL</span>
+                    <span class="logo-text-sub">COMPANY LTD.</span>
+                </span>
+            </a>
+
+            <!-- Main navigation -->
+            <nav class="main-nav" aria-label="Main menu">
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#safety">Safety &amp; Licenses</a></li>
+
+                    <!-- Capabilities has a dropdown of the 4 sub-services -->
+                    <li class="has-dropdown">
+                        <button class="dropdown-toggle" id="capabilities-toggle" aria-expanded="false" aria-controls="capabilities-menu">
+                            Capabilities
+                            <svg class="dropdown-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                        </button>
+                        <ul class="dropdown-menu" id="capabilities-menu">
+                            <li><a href="#power-systems">Power Systems</a></li>
+                            <li><a href="#automation-controls">Automation &amp; Controls</a></li>
+                            <li><a href="#mep-engineering">MEP Engineering</a></li>
+                            <li><a href="#field-maintenance">Field Maintenance</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#projects">Projects Overview</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:08037272895" class="btn btn-outline header-call-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.57 1 1 0 01-.25 1.01l-2.2 2.21z"/></svg>
+                    0803 727 2895
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ============================================
+             HERO SECTION
+             To change the background photo: replace the file
+             images/hero-background.jpg with your own photo
+             (keep the same file name, or update the CSS in
+             css/styles.css under ".hero")
+             ============================================ -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Since 1991 &middot; RC: 1026032</p>
+                <h1>Powering Nigeria's Infrastructure &amp; Industry</h1>
+                <p class="hero-text">Registered electrical engineering and contracting services &mdash; from high-voltage installations to complete filling station construction and renewable energy systems.</p>
+                <div class="hero-buttons">
+                    <a href="#capabilities" class="btn btn-primary btn-large">See Our Capabilities</a>
+                    <a href="#contact" class="btn btn-secondary btn-large">Request a Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             TRUST / CREDENTIALS STRIP
+             ============================================ -->
+        <section class="credentials" aria-label="Company credentials">
+            <div class="credentials-grid">
+                <div class="credential-item">
+                    <div class="credential-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="30" height="30"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <div class="credential-text">
+                        <h3>Registered Company</h3>
+                        <p>CAC Registration Number 1026032</p>
+                    </div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <div class="credential-text">
+                        <h3>Nationwide Service</h3>
+                        <p>Established bases in Lagos &amp; Ogun State, with certified engineers across Nigeria's 36 states</p>
+                    </div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 8a3 3 0 100 6 3 3 0 000-6z"/><path d="M20.5 6c-2.61 0-4.92-1.06-6.56-2.79L12 1.75l-1.94 1.46C8.42 4.94 6.11 6 3.5 6H2v2h1.5c2.61 0 4.92 1.06 6.56 2.79L12 13.25l1.94-1.46C15.58 10.06 17.89 9 20.5 9H22V7h-1.5z"/></svg>
+                    </div>
+                    <div class="credential-text">
+                        <h3>40+ Years Experience</h3>
+                        <p>Trusted by Oando, Ardova, Conoil &amp; more</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             ABOUT US
+             ============================================ -->
+        <section id="about" class="section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>About Gallo Electrical</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Established in <strong>1991</strong> and registered under the Corporate Affairs Commission of the Federal Republic of Nigeria (RC: 1026032), Gallo Electrical Company Limited is an indigenous firm with deep experience in electrical services across the country.</p>
+                        <p>We specialise in the complete installation of electrical services and civil works for commercial, industrial and public developments. Our work ranges from routine maintenance to large-scale projects worth hundreds of millions of naira.</p>
+                        <p>We believe in building strong, lasting relationships with our clients &mdash; delivering high-quality work on time, within budget, and to a standard that earns repeat business.</p>
+                    </div>
+
+                    <ul class="about-facts">
+                        <li>
+                            <strong>Certified Staffs</strong>
+                            <span>Dedicated engineers and technicians</span>
+                        </li>
+                        <li>
+                            <strong>Major Clients</strong>
+                            <span>Oando, Ardova, Conoil, ENYO Retails, Pinnacle Oil</span>
+                        </li>
+                        <li>
+                           <strong>Nationwide Reach</strong>
+                           <span>Established bases in Lagos and Ogun State, certified engineers serving all 36 states</span>
+                        </li>
+                        <li>
+                            <strong>Our Commitment</strong>
+                            <span>Quality, Health &amp; Safety, Training and Environmental care</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SAFETY & LICENSES
+             ============================================ -->
+        <section id="safety" class="section section-alt">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Safety &amp; Licenses</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="safety-grid">
+                    <div class="safety-card">
+                        <h3>Corporate Registration</h3>
+                        <p><strong>Corporate Affairs Commission (CAC)</strong><br>
+                        Registration Number: 1026032<br>
+                        Incorporated: 16 April 2012</p>
+                    </div>
+
+                    <div class="safety-card">
+                        <h3>Professional Qualifications</h3>
+                        <p>Our management team includes chartered and certified engineers:</p>
+                        <ul>
+                            <li>Project Managers with 12&ndash;15 years of field experience each</li>
+                            <li>Technical Manager with 26 years of experience, COREN certified</li>
+                        </ul>
+                    </div>
+
+                    <div class="safety-card">
+                        <h3>Safety Standards</h3>
+                        <p>Every project follows recognised safety practice, including:</p>
+                        <ul>
+                            <li>Health, Safety &amp; Environment (HSE) standards</li>
+                            <li>Electrical Trade Test certification</li>
+                            <li>COREN engineering compliance</li>
+                        </ul>
+                    </div>
+
+                    <div class="safety-card">
+                        <h3>Financial Standing</h3>
+                        <p><strong>Bankers:</strong></p>
+                        <ul>
+                            <li>FCMB Nig Plc &mdash; Lekki Ajah Branch</li>
+                            <li>Access Bank Plc &mdash; Gbagada Branch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CAPABILITIES
+             Each of the 4 services below has its own id
+             so the dropdown menu in the header can link
+             straight to it.
+             ============================================ -->
+        <section id="capabilities" class="section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Our Capabilities</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-intro">Four core areas of electrical engineering expertise</p>
+                </div>
+
+                <div class="capability-block" id="power-systems">
+                    <div class="capability-number" aria-hidden="true">01</div>
+                    <div class="capability-content">
+                        <h3>Power Systems</h3>
+                        <p>Complete design and installation of electrical power infrastructure.</p>
+                        <ul>
+                            <li>High-voltage transformer installations (50kVA&ndash;500kVA and above)</li>
+                            <li>Low-voltage distribution systems and switchboards</li>
+                            <li>Power line design and installation</li>
+                            <li>Earthing, bonding and lightning protection</li>
+                            <li>Standby generation and UPS systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="capability-block" id="automation-controls">
+                    <div class="capability-number" aria-hidden="true">02</div>
+                    <div class="capability-content">
+                        <h3>Automation &amp; Controls</h3>
+                        <p>Advanced electrical control and automation solutions.</p>
+                        <ul>
+                            <li>Bespoke switchgear manufacture and installation</li>
+                            <li>Load balancing and distribution control</li>
+                            <li>Security lighting and surveillance systems</li>
+                            <li>Automated fault detection and management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="capability-block" id="mep-engineering">
+                    <div class="capability-number" aria-hidden="true">03</div>
+                    <div class="capability-content">
+                        <h3>MEP Engineering</h3>
+                        <p>Full mechanical, electrical and plumbing coordination for buildings.</p>
+                        <ul>
+                            <li>Integrated MEP design for commercial and industrial buildings</li>
+                            <li>Building automation systems</li>
+                            <li>Energy-efficient lighting solutions</li>
+                            <li>Complete building infrastructure installations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="capability-block" id="field-maintenance">
+                    <div class="capability-number" aria-hidden="true">04</div>
+                    <div class="capability-content">
+                        <h3>Field Maintenance</h3>
+                        <p>Ongoing support and maintenance to keep your systems running.</p>
+                        <ul>
+                            <li>Routine electrical maintenance and inspections</li>
+                            <li>Equipment testing (insulation, earth fault, voltage)</li>
+                            <li>Emergency repairs and troubleshooting</li>
+                            <li>Preventive maintenance programmes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             PROJECTS OVERVIEW
+             ============================================
+             HOW TO ADD YOUR OWN PROJECT PHOTOS:
+             1. Put your photo files inside the "images/projects" folder.
+             2. Copy one of the <div class="project-card"> blocks below.
+             3. Change the "src" to your file name,
+                e.g. src="images/projects/my-new-project.jpg"
+             4. Change the alt text, title and description to match.
+             That's it - no other file needs to change.
+             ============================================ -->
+        <section id="projects" class="section section-alt">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Projects Overview</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-intro">A selection of our work with major Nigerian energy and commercial clients</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT CARD 1 -->
+                    <div class="project-card">
+                        <img src="images/projects/project-01.jpg" alt="Electrical panel maintenance work" width="400" height="220" loading="lazy" onerror="this.src='images/photo-placeholder.svg'; this.classList.add('is-placeholder')">
+                        <div class="project-card-body">
+                            <h3>Pinnacle Oil &amp; Gas &mdash; Lekki</h3>
+                            <p>Electrical works upgrade at Pinnacle Oil and Gas station, Lekki, Lagos.</p>
+                            <p class="project-meta">2024</p>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CARD 2 -->
+                    <div class="project-card">
+                        <img src="images/projects/project-02.jpg" alt="Fuel station electrical installation" width="400" height="220" loading="lazy" onerror="this.src='images/photo-placeholder.svg'; this.classList.add('is-placeholder')">
+                        <div class="project-card-body">
+                            <h3>Ardova PLC &mdash; Multi-Station</h3>
+                            <p>Electrical works across multiple Ardova service stations nationwide.</p>
+                            <p class="project-meta">2023&ndash;2024</p>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CARD 3 -->
+                    <div class="project-card">
+                        <img src="images/projects/project-03.jpg" alt="ENYO service station upgrade" width="400" height="220" loading="lazy" onerror="this.src='images/photo-placeholder.svg'; this.classList.add('is-placeholder')">
+                        <div class="project-card-body">
+                            <h3>ENYO Retails &amp; Supply</h3>
+                            <p>Station upgrades across multiple ENYO locations in Lagos and Ogun State.</p>
+                            <p class="project-meta">2018&ndash;2019</p>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CARD 4 -->
+                    <div class="project-card">
+                        <img src="images/projects/project-04.jpg" alt="Oando facility maintenance work" width="400" height="220" loading="lazy" onerror="this.src='images/photo-placeholder.svg'; this.classList.add('is-placeholder')">
+                        <div class="project-card-body">
+                            <h3>Oando PLC &mdash; Long-Term Maintenance</h3>
+                            <p>Ongoing electrical maintenance and facility expansion since 2011.</p>
+                            <p class="project-meta">2011&ndash;Present</p>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CARD 5 -->
+                    <div class="project-card">
+                        <img src="images/projects/project-05.jpg" alt="Conoil station electrical repair" width="400" height="220" loading="lazy" onerror="this.src='images/photo-placeholder.svg'; this.classList.add('is-placeholder')">
+                        <div class="project-card-body">
+                            <h3>Conoil PLC &mdash; Repair Works</h3>
+                            <p>Electrical repair works at Conoil service stations across Lagos.</p>
+                            <p class="project-meta">2016</p>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CARD 6 -->
+                    <div class="project-card">
+                        <img src="images/projects/project-06.jpg" alt="Grain storage silo electrical works" width="400" height="220" loading="lazy" onerror="this.src='images/photo-placeholder.svg'; this.classList.add('is-placeholder')">
+                        <div class="project-card-body">
+                            <h3>Federal Ministry of Agriculture</h3>
+                            <p>Electrical sub-contracting on a 25,000 MT grain storage silo, Oyo State.</p>
+                            <p class="project-meta">1993&ndash;2005</p>
+                        </div>
+                    </div>
+
+                     <!-- PROJECT CARD 7 -->
+                    <div class="project-card">
+                        <img src="images/projects/project-07.jpg" alt="Grain storage silo electrical works" width="400" height="220" loading="lazy" onerror="this.src='images/photo-placeholder.svg'; this.classList.add('is-placeholder')">
+                        <div class="project-card-body">
+                            <h3>NNPC apapa Head office, safety net</h3>
+                            <p>Electrical sub-contracting on </p>
+                            <p class="project-meta">2026</p>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CARD 8 -->
+                    <div class="project-card">
+                        <img src="images/projects/project-08.jpg" alt="Grain storage silo electrical works" width="400" height="220" loading="lazy" onerror="this.src='images/photo-placeholder.svg'; this.classList.add('is-placeholder')">
+                        <div class="project-card-body">
+                            <h3>Hybrid Solar Power System</h3>
+                            <p>Installation of 24kva huawei inverter with 40kwh lithium ion batteries </p>
+                            <p class="project-meta">2026</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CONTACT US
+             ============================================ -->
+        <section id="contact" class="section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Contact Us</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            </div>
+                            <div>
+                                <h3>Head Office</h3>
+                                <p>1, Church Street, Unity Estate,<br>Omu Arire, Ogun State, Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            </div>
+                            <div>
+                                <h3>Branch Office</h3>
+                                <p>26, Gbagada Road, Bariga,<br>Lagos State, Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.57 1 1 0 01-.25 1.01l-2.2 2.21z"/></svg>
+                            </div>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p><a href="tel:08037272895">0803 727 2895</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="24" height="24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            </div>
+                            <div>
+                                <h3>Email Us</h3>
+                                <p><a href="mailto:gallooelect@yahoo.com">gallooelect@yahoo.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form">
+                        <h3>Send Us a Message</h3>
+
+                        <div class="form-group">
+                            <label for="form-name">Full Name</label>
+                            <input type="text" id="form-name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-phone">Phone Number</label>
+                            <input type="tel" id="form-phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Tell Us About Your Project</label>
+                            <textarea id="form-message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-full">Send via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="site-footer">
+        <img src="images/gallo-logo-icon.png" alt="Gallo Electrical Company Ltd logo" class="footer-logo" width="70" height="70">
+        <p class="footer-name">GALLO ELECTRICAL COMPANY LIMITED</p>
+        <p>RC: 1026032 &middot; Established 1991</p>
+        <p class="footer-copyright">&copy; 2026 Gallo Electrical Company Ltd. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating action buttons -->
+    <!-- This Call button only shows on phones and tablets, because on
+         those screens the header's call button (top right) is hidden
+         to save space. On laptops/desktops the header button is used
+         instead, so this one hides itself automatically (see styles.css). -->
+    <a href="tel:08037272895" class="call-btn" aria-label="Call Gallo Electrical: 0803 727 2895">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="white"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.57 1 1 0 01-.25 1.01l-2.2 2.21z"/></svg>
+    </a>
+
+    <a href="https://wa.me/2348037272895?text=Hello%20Gallo%20Electrical,%20I%20would%20like%20to%20inquire%20about%20a%20project..."
+       target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.121 1.535 5.857L.057 23.982l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.016-1.374l-.36-.213-3.732.979 1.001-3.64-.234-.374A9.794 9.794 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+    </a>
+
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </button>
+
+    <!-- Our JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
